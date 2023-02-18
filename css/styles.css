@@ -82,7 +82,6 @@ main {
   background-image: url(../images/bg-pattern-quotation.svg);
   background-repeat: no-repeat;
   background-position: top right 10%;
-  /* background-size: 32.5% 22.5%; */
   color: var(--white);
 }
 .purple .reviewer img {

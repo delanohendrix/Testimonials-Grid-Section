@@ -27,18 +27,10 @@ Users should be able to:
 
 ![Screenshot](/screenshot.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [My Solution](https://your-solution-url.com)
+- Live Site URL: [Github Pages](https://delanohendrix.github.io/Testimonials-Grid-Section/)
 
 ## My process
 
@@ -49,45 +41,46 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I made an effort to make sure I designed the card to be modular since they all shared the same basic layout. From there I could use the class "tcard" (testimonial card) and do one universal design. Next I was given the choice to either use the psuedo element nth-child to target each card individually or just give each an additional class based on color; I chose to go with the latter to make it easier to see specific adjustments versus overall adjustments to the design.
 
-To see how you can add code snippets, see below:
+An example of the universal card layout and the targeted specific design adjustments:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="tcard purple">
+  <div class="reviewer">
+    <img src="images/image-daniel.jpg" alt="" />
+    <p>
+      Name <br />
+      <span>Verified Graduate</span>
+    </p>
+  </div>
+  <h2 class="quote">Quote Text</h2>
+  <p class="review">Review Text</p>
+</div>
 ```
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.purple {
+  background-color: var(--moderate-violet);
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+  color: var(--white);
+}
+.purple .reviewer img {
+  border: 2px solid var(--opa-white);
+}
+.purple .review {
+  padding-right: 24px;
 }
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [CSS Reference](https://cssreference.io/) - This site helped me by refreshing me on the usage of various css attributes and properties.
 
 ## Author
 
